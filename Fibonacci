@@ -1,0 +1,21 @@
+def fibonacci(num):
+    #Gera a sequência de Fibonacci até o número num
+    fibonacci_seq = [0,1]
+    
+    while True:
+        seq = fibonacci_seq[-1] + fibonacci_seq[-2]
+        if (seq > num):
+            break
+        fibonacci_seq.append(seq)
+
+    return fibonacci_seq
+
+#Solicita o um número inteiro ao usuário
+num = int(input('Informe um número inteiro: '))
+
+fibonacci_seq = fibonacci(num)
+#Verifica se o número pertece a sequência
+if num in fibonacci_seq:
+    print(f'O número {num} pertence à sequência de Fibonacci.')
+else:
+    print(f'O número {num} não pertence à sequência de Fibonacci.')
