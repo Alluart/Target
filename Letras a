@@ -1,0 +1,15 @@
+def contar_a(texto): #Conta a quantidade de a
+    texto_lower = texto.lower() #Transforma a string em minuscula
+    quant_a = texto_lower.count('a')
+
+    return quant_a #Retorna a quantidade da letra a
+
+#Solicita o texto
+texto = input('Informe um texto: ')
+
+quantidade = contar_a(texto) #Conta a quantidade de vezes que "a" aparece no texto  
+
+if quantidade > 0:
+    print(f'A letra "a" aparece {quantidade} de vez(es) no texto.' )
+else:
+    print('A letra "a" não aparece nenhuma vez no texto')
